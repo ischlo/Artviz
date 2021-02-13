@@ -95,9 +95,9 @@ var BarPlotting = function () {
     var Series = [];
 
     $.each(Gender, function (i0, v) {
-        
+
         $.ajax({
-            url: "http://dev.spatialdatacapture.org:8709/Assessment/Quantity/All/All/" + v, success: function (data) {
+            url: "https://www.theartviz.com:3000/Assessment/Quantity/All/All/" + v, success: function (data) {
                 temp = [0, 0, 0, 0, 0, 0, 0];
                 for (var i = 0; i < data.length; i++) {
                     for (var j = 0; j < 7; j++) {

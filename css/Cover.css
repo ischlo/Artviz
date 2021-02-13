@@ -5,14 +5,14 @@
     padding:10px;
     z-index: 40;
     width:40%;
-    color:#f1ece4;
+    color:#000000;
     font-family: "Franklin Gothic";
     outline:none;
     text-decoration: none;
 }
 #navbar a{
-    color: #f1ece4;
-    font-size:40px;
+    color: #f2f2f2;
+    font-size:20px;
     text-decoration:inherit;
     font-weight: bold;
     margin-right:5%;
@@ -32,7 +32,7 @@
     width:100%;
     height:450px;
     z-index: 30;
-    background-color: #454a64;
+    background-color: #000000;
     overflow: hidden;
 }
 
@@ -40,7 +40,7 @@
     position: absolute;
     background: transparent;
     color:#f1ece4;
-    height: 150px;
+    height: 100px;
     width:100%;
     padding:0px;
     top:80px;
@@ -97,8 +97,8 @@
 
 
 #F1:hover, #F2:hover, #F3:hover{
-    background:linear-gradient(to right, #454a6400, #f1ece4 50%, #454a6400) !important;;
-    color:#454a64 !important;
+    background: linear-gradient(to right, #454a6400, #f1ece4 50%, #454a6400) !important;;
+    color:#8c8c8c !important;
 }
 
 

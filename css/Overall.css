@@ -59,7 +59,7 @@ body{
   height:15px;
   width:15%;
   text-align:center;
-  color:#454a64;
+  color:#000000;
   font-weight:900;
   overflow: hidden;
 }
@@ -79,7 +79,7 @@ body{
 }
 
 .S1:hover, .S2:hover, .S3:hover{
-  color:#a55407;
+  color:#000000;
 }
 
 
@@ -89,7 +89,7 @@ body{
   height:15px;
   width:15%;
   text-align:center;
-  color:#454a64;
+  color:#000000;
   font-weight:900;
   overflow: hidden;
 }
@@ -107,5 +107,5 @@ body{
 }
 
 .C1:hover, .C2:hover, .C3:hover{
-  color:#a55407;
+  color:#000000;
 }

@@ -19,7 +19,7 @@
     height: 30px;
     font-size: 22px;
     margin: 0;
-    color: #d38236;
+    color: #000000;
     text-align: left;
     text-shadow:1px 1px #454a64;
 }
@@ -39,7 +39,7 @@
    z-index: 14;
 }
 #Text1,#Text2{
-    background-color: #a55407;
+    background-color: #000000;
 }
 
 #Map2,#Text2{
@@ -71,7 +71,7 @@
     padding: 10px;
     background-color: transparent;
     text-align: center;
-    color: #454a64;
+    color: #000000;
 }
 .loading {
     color:#454a64;
@@ -130,22 +130,22 @@
 .Gender p{
     height:35px;
     font-size:23px;
-    background:linear-gradient(to right, #a55407 30%, #454a6400);
-    color:#f1ece4;
+    background:linear-gradient(to right, #b3d9ff 30%, #454a6400);
+    color:#000000;
     padding:5px 0 5px 10px;
     margin:5px 0 5px 0;
-    text-shadow:1.5px 1.5px #454a64;
+    /*text-shadow:1.5px 1.5px #000000;*/
     overflow: hidden;
 }
 
 .Gender #A{
     height:35px;
     font-size:23px;
-    background:linear-gradient(to right, #454a64 30%, #454a6400);
-    color:#f1ece4;
+    background:linear-gradient(to right, #b3d9ff 30%, #454a6400);
+    color:#000000;
     padding:5px 0 5px 10px;
     margin:5px 0 5px 0;
-    text-shadow:1.5px 1.5px #a55407;
+    text-shadow:1.5px 1.5px #000000;
 }
 
 .Gender p:hover{
