@@ -31,7 +31,7 @@ var circling = function(CapitalLat,CapitalLon,Quantity,CountryName){
 var Bubble_Mapping = function (Year, Gender) {
     console.log("starting to plot the bubble map");
 
-    d3.json("https://www.theartviz.com:3000/Assessment/Quantity/" + Year + "/All/" + Gender, function (err, data) {
+    d3.json("https://www.theartviz.com/Assessment/Quantity/" + Year + "/All/" + Gender, function (err, data) {
         console.log(err);
         Circles.clearLayers()
         $.each(data, function (i, v) {

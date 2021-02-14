@@ -3,7 +3,7 @@ var country = "All";
 var color = "maroon";
 
 $(document).ready(function () {
-    $.getJSON("https://www.theartviz.com:3000/Assessment/ColorGeo/", function (data, status) {
+    $.getJSON("https://www.theartviz.com/Assessment/ColorGeo/", function (data, status) {
 	console.log(status);
         console.log("getting the colorMap from the server!");
         var mapcountry = "", mapcolor = "", m = 0;
@@ -67,7 +67,7 @@ $(document).ready(function () {
 
 // Following are functions
 function allcolorsforcountry(country) {
-    $.getJSON("https://www.theartviz.com:3000/Assessment/Color/"  + country + "/All", function (data) {
+    $.getJSON("https://www.theartviz.com/Assessment/Color/"  + country + "/All", function (data) {
         console.log("Filling the searchbar with colors of the country " + country + "!");
         $("select").empty();
         $.each(data, function (u) {
@@ -90,7 +90,7 @@ function allcolorsforcountry(country) {
 
 function countryandcolor(country, color) {
 
-    $.getJSON("https://www.theartviz.com:3000/Assessment/Color/" + country + "/" + color, function (data) {
+    $.getJSON("https://www.theartviz.com/Assessment/Color/" + country + "/" + color, function (data) {
         console.log("getting for " + country + " and " + color + " from server and fillig the gallery!");
         $("#imagegallery").empty();
 
@@ -123,7 +123,7 @@ function countryandcolor(country, color) {
 
 
 function getcolors() {
-    $.getJSON("https://www.theartviz.com:3000/Assessment/Color/All/All", function (data) {
+    $.getJSON("https://www.theartviz.com/Assessment/Color/All/All", function (data) {
         console.log("Filling the searchbar!");
         $("select").empty();
         $.each(data, function (u) {
