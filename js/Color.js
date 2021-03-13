@@ -71,6 +71,8 @@ $(document).ready(function () {
             year = parseInt(Y.target.value);
             // Change the time labe
             $("#time").text(year + "s");
+            allcolorsforcountry(country);
+            countryandcolor(country, color);
             //here comes the call to fill the map ;
         });
     
