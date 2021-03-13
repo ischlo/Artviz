@@ -4,6 +4,13 @@ var color = "maroon";
 var year =1930;
 
 $(document).ready(function () {
+    fillMap(year);
+});
+
+
+// Following are functions
+
+function fillMap(year) {
     $.getJSON("https://www.theartviz.com/Assessment/ColorGeo/"+year, function (data, status) {
 	console.log(status);
         console.log("getting the colorMap from the server!");
@@ -65,12 +72,9 @@ $(document).ready(function () {
         L.layerGroup(colordata).addTo(map3);
     });
 
-    
-    
-});
+}
 
 
-// Following are functions
 function allcolorsforcountry(country) {
     $.getJSON("https://www.theartviz.com/Assessment/Color/"  + country + "/All/"+year, function (data) {
         console.log("Filling the searchbar with colors of the country " + country + "!");
@@ -128,7 +132,7 @@ function countryandcolor(country, color) {
 
 
 function getcolors() {
-    $.getJSON("https://www.theartviz.com/Assessment/Color/All/All", function (data) {
+    $.getJSON("https://www.theartviz.com/Assessment/Color/All/All/"+year, function (data) {
         console.log("Filling the searchbar!");
         $("select").empty();
         $.each(data, function (u) {
