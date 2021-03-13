@@ -1,9 +1,10 @@
 var portnumber = 3000;
 var country = "All";
 var color = "maroon";
+var year =1930;
 
 $(document).ready(function () {
-    $.getJSON("https://www.theartviz.com/Assessment/ColorGeo/", function (data, status) {
+    $.getJSON("https://www.theartviz.com/Assessment/ColorGeo/"+year, function (data, status) {
 	console.log(status);
         console.log("getting the colorMap from the server!");
         var mapcountry = "", mapcolor = "", m = 0;
@@ -19,7 +20,7 @@ $(document).ready(function () {
             object = wkt.toObject().bindPopup(mapcountry, { className: 'Popup' });
             object.name = mapcountry;
             for (var key in data[u]) {
-                if (key != "level_0" && key != "index" && key != "ISO_A3" && key != "geometry" && key != "ADMIN") {
+                if (key != "level_0" && key != "index" && key != "ISO_A3" && key != "geometry" && key != "ADMIN" && key != "Decade") {
                     if (data[u][key] > m) {
                         m = data[u][key];
                         mapcolor = key;
@@ -63,11 +64,26 @@ $(document).ready(function () {
 
         L.layerGroup(colordata).addTo(map3);
     });
+    
+    $('#slider')[0]
+        .addEventListener('input', function (Y) {
+
+            year = parseInt(Y.target.value);
+            // Change the time labe
+            $("#time").text(year + "s");
+            //here comes the call to fill the map ;
+        });
+    
+    
+});
+
+$(document).ready(function () {
+    
 });
 
 // Following are functions
 function allcolorsforcountry(country) {
-    $.getJSON("https://www.theartviz.com/Assessment/Color/"  + country + "/All", function (data) {
+    $.getJSON("https://www.theartviz.com/Assessment/Color/"  + country + "/All/"+year, function (data) {
         console.log("Filling the searchbar with colors of the country " + country + "!");
         $("select").empty();
         $.each(data, function (u) {
@@ -90,7 +106,7 @@ function allcolorsforcountry(country) {
 
 function countryandcolor(country, color) {
 
-    $.getJSON("https://www.theartviz.com/Assessment/Color/" + country + "/" + color, function (data) {
+    $.getJSON("https://www.theartviz.com/Assessment/Color/" + country + "/" + color + "/"+year, function (data) {
         console.log("getting for " + country + " and " + color + " from server and fillig the gallery!");
         $("#imagegallery").empty();
 
