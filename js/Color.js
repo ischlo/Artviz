@@ -64,24 +64,11 @@ $(document).ready(function () {
 
         L.layerGroup(colordata).addTo(map3);
     });
-    
-    $('#slider')[0]
-        .addEventListener('input', function (Y) {
 
-            year = parseInt(Y.target.value);
-            // Change the time labe
-            $("#time").text(year + "s");
-            allcolorsforcountry(country);
-            countryandcolor(country, color);
-            //here comes the call to fill the map ;
-        });
     
     
 });
 
-$(document).ready(function () {
-    
-});
 
 // Following are functions
 function allcolorsforcountry(country) {
@@ -191,6 +178,18 @@ $(".colors").change(function () {
     countryandcolor(country, selectedColor);
     color = selectedColor;
 });
+
+    
+    $('#slider')[0]
+        .addEventListener('input', function (Y) {
+
+            year = parseInt(Y.target.value);
+            // Change the time labe
+            $("#time").text(year + "s");
+            allcolorsforcountry(country);
+            countryandcolor(country, color);
+            //here comes the call to fill the map ;
+        });
 
 
 $(document).ready(function () {
