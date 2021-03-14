@@ -1,19 +1,26 @@
 var portnumber = 3000;
 var country = "All";
-var color = "maroon";
+var color = "";
 var year =1930;
+var colormap = L.layerGroup();
 
 $(document).ready(function () {
+    //countryandcolor(country, color);
+    getcolors();
+    
     fillMap(year);
+    //console.log("Getting all the colors for the searchar:");
+    
 });
 
 
 // Following are functions
 
 function fillMap(year) {
+    console.log("fillmap: getting the colorMap from the server!");
     $.getJSON("https://www.theartviz.com/Assessment/ColorGeo/"+year, function (data, status) {
-	console.log(status);
-        console.log("getting the colorMap from the server!");
+	console.log('Fillmap'+ status);
+        
         var mapcountry = "", mapcolor = "", m = 0;
         var wkt = new Wkt.Wkt();
         var object;
@@ -31,9 +38,10 @@ function fillMap(year) {
                     if (data[u][key] > m) {
                         m = data[u][key];
                         mapcolor = key;
-                    };
-                };
-            };
+                        
+                    }
+                }
+            }
 
             object.setStyle({
                 color: "black",
@@ -45,13 +53,13 @@ function fillMap(year) {
             object.on("click", function (e) {
                 if (country == e.target.name) {
                     country = "All";
-                    allcolorsforcountry(country);
+                    allcolorsforcountry("All");
                     countryandcolor(country, e.target.options.fillColor);
                     map3.closePopup();
 
                 } else {
                     //object.options.padding = 5;
-                    object.options.fillColor = "black";
+                    //object.options.fillColor = "black";
                     country = e.target.name;
                     console.log(country);
                     color = e.target.options.fillColor;
@@ -60,7 +68,6 @@ function fillMap(year) {
                     countryandcolor(country, color);
                 };
             });
-
             colordata.push(object);
 
             m = 0;
@@ -68,16 +75,17 @@ function fillMap(year) {
             mapcountry = "";
 
         });
-
-        L.layerGroup(colordata).addTo(map3);
+        colormap = L.layerGroup(colordata);
+        colormap.addTo(map3);
     });
 
 }
 
 
 function allcolorsforcountry(country) {
+    console.log("allcolorsforcountry: Filling the searchbar with colors of the country " + country + "!");
     $.getJSON("https://www.theartviz.com/Assessment/Color/"  + country + "/All/"+year, function (data) {
-        console.log("Filling the searchbar with colors of the country " + country + "!");
+        console.log('allcolors for country'+ status);
         $("select").empty();
         $.each(data, function (u) {
             //console.log(data[u]['Colors']);
@@ -91,16 +99,17 @@ function allcolorsforcountry(country) {
                 $("select").append(
                     '<option value="' + parseInt(u) + '">' + data[u]['Colors'] + '</option>'
                 );
-            };
+            }
         });
     });
 }
 
 
 function countryandcolor(country, color) {
+    console.log("countryandcolor: getting for " + country + " and " + color + " from server and fillig the gallery!");
 
     $.getJSON("https://www.theartviz.com/Assessment/Color/" + country + "/" + color + "/"+year, function (data) {
-        console.log("getting for " + country + " and " + color + " from server and fillig the gallery!");
+        console.log('country and color '+ status);
         $("#imagegallery").empty();
 
         if (data.length > 1) {
@@ -119,7 +128,7 @@ function countryandcolor(country, color) {
             $("#scrollable").css('color', 'black');
         };
 
-        $.each(data.slice(0, 300), function (i, v) {
+        $.each(data.slice(0, 30), function (i, v) {
             if (v != undefined) {
                 $("#imagegallery").append(
                     '<a target="_blank" href="' + v.URL + '"><img src="' + v.ThumbnailURL + '" alt="https://www.moma.org"> </a>'
@@ -132,8 +141,11 @@ function countryandcolor(country, color) {
 
 
 function getcolors() {
+    console.log("getcolors: Filling the searchbar!");
     $.getJSON("https://www.theartviz.com/Assessment/Color/All/All/"+year, function (data) {
-        console.log("Filling the searchbar!");
+        console.log('getcolors '+ status);
+        color = data[Math.floor(Math.random() * data.length)]['Colors'];
+        console.log(color);
         $("select").empty();
         $.each(data, function (u) {
 
@@ -149,6 +161,7 @@ function getcolors() {
                 );
             }
         });
+        countryandcolor(country, color);
     });
 };
 
@@ -184,20 +197,16 @@ $(".colors").change(function () {
 });
 
     
-    $('#slider')[0]
-        .addEventListener('input', function (Y) {
-
-            year = parseInt(Y.target.value);
-            // Change the time labe
-            $("#time").text(year + "s");
-            allcolorsforcountry(country);
-            countryandcolor(country, color);
-            //here comes the call to fill the map ;
-        });
-
-
-$(document).ready(function () {
-    console.log("Getting all the colors for the searchar:");
-    getcolors();
-    countryandcolor(country, color);
+$('#sliderColor')[0]
+    .addEventListener('input', function (Y) {
+        console.log('clearing the map !')
+        colormap.clearLayers();
+        country = "All";
+        year = parseInt(Y.target.value);
+        $("#timeColor").text(year + "s");
+        //countryandcolor(country, color);
+        // Change the time labe
+        getcolors();
+        fillMap(year);
+        //countryandcolor(country, color);
 });
