@@ -61,8 +61,10 @@ var map3 = L.map('Map3', {
 	zoom: 1.5,
 	scrollWheelZoom:true,
 	zoomControl:true,
+	maxBounds: bounds,
 	maxBoundsViscosity: 1.0,
-	minZoom:2
+	minZoom:2,
+	maxZoom:7
 });
 
 L.tileLayer('https://api.mapbox.com/styles/v1/{username}/{id}/tiles/{tilesize}/{z}/{x}/{y}?access_token={accessToken}', {

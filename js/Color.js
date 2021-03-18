@@ -19,7 +19,7 @@ $(document).ready(function () {
 function fillMap(year) {
     console.log("fillmap: getting the colorMap from the server!");
     $.getJSON("https://www.theartviz.com/Assessment/ColorGeo/"+year, function (data, status) {
-	console.log('Fillmap'+ status);
+	console.log('Fillmap '+ status);
         
         var mapcountry = "", mapcolor = "", m = 0;
         var wkt = new Wkt.Wkt();
@@ -69,14 +69,16 @@ function fillMap(year) {
                 };
             });
             colordata.push(object);
-
             m = 0;
             mapcolor = "";
             mapcountry = "";
 
         });
+        colormap.clearLayers();
         colormap = L.layerGroup(colordata);
         colormap.addTo(map3);
+        //colordata = [];
+        //console.log(colordata);
     });
 
 }
@@ -85,7 +87,7 @@ function fillMap(year) {
 function allcolorsforcountry(country) {
     console.log("allcolorsforcountry: Filling the searchbar with colors of the country " + country + "!");
     $.getJSON("https://www.theartviz.com/Assessment/Color/"  + country + "/All/"+year, function (data) {
-        console.log('allcolors for country'+ status);
+        console.log('allcolors for country '+ status);
         $("select").empty();
         $.each(data, function (u) {
             //console.log(data[u]['Colors']);
@@ -200,13 +202,12 @@ $(".colors").change(function () {
 $('#sliderColor')[0]
     .addEventListener('input', function (Y) {
         console.log('clearing the map !')
-        colormap.clearLayers();
         country = "All";
         year = parseInt(Y.target.value);
-        $("#timeColor").text(year + "s");
-        //countryandcolor(country, color);
-        // Change the time labe
+        
+        $("#timeColor").text(year + "s"); // Change the time label
+        
         getcolors();
         fillMap(year);
-        //countryandcolor(country, color);
+        
 });
