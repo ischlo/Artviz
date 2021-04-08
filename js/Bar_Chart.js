@@ -124,7 +124,7 @@ var BarPlotting = function () {
                 Highcharts.chart(options);
             }
         }
-    });
+    }); 
 
 };
 BarPlotting();

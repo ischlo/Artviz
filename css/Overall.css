@@ -86,12 +86,11 @@ body{
 .C1, .C2, .C3{
   position:absolute;
   top:7.5px;
-  height:17px;
+  height:20px;
   width:20%;
   text-align:center;
   color:#000000;
   font-weight:900;
-  overflow:auto;
 }
 
 .C1{
