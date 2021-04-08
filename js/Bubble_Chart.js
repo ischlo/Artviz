@@ -6,7 +6,7 @@ var BubblePlotting = function () {
             height: '40%',
             backgroundColor: "transparent",
             style: {
-                fontFamily: "Abhaya Libre",
+                fontFamily: "Calibri light",
             }
         },
         colors: [
@@ -26,10 +26,10 @@ var BubblePlotting = function () {
                 color: '#f1ece4'
             },
             itemHoverStyle: {
-                color: '#a55407'
+                color: '#f1ece4'
             },
             itemHiddenStyle: {
-                color: '#a55407'
+                color: '#f1ece4'
             }
         },
         exporting: { enabled: false },
@@ -41,11 +41,14 @@ var BubblePlotting = function () {
                 zMin: 0,
                 zMax: 1000,
                 layoutAlgorithm: {
-                    gravitationalConstant: 0.05,
+                    gravitationalConstant: 0.2,
                     splitSeries: true,
                     seriesInteraction: false,
-                    dragBetweenSeries: true,
-                    parentNodeLimit: true
+                    dragBetweenSeries: false,
+                    parentNodeLimit:true,
+                    friction: -0.5,
+                    bubblePadding: 7,
+                    initialPositions: "random"
                 },
                 dataLabels: {
                     enabled: true,

@@ -6,7 +6,7 @@
     z-index: 40;
     width:40%;
     color:#000000;
-    font-family: "Franklin Gothic";
+    font-family: "Calibri Light";
     outline:none;
     text-decoration: none;
 }
@@ -30,7 +30,7 @@
 .Cover #Intro{
     position:absolute;
     width:100%;
-    height:450px;
+    height:300px;
     z-index: 30;
     background-color: #000000;
     overflow: hidden;
@@ -40,10 +40,10 @@
     position: absolute;
     background: transparent;
     color:#f1ece4;
-    height: 100px;
+    height: 70px;
     width:100%;
     padding:0px;
-    top:80px;
+    top:70px;
     text-align: center;
     overflow: hidden;
 }
@@ -91,11 +91,6 @@
 }
 
 
-
-
-
-
-
 #F1:hover, #F2:hover, #F3:hover{
     background: linear-gradient(to right, #454a6400, #f1ece4 50%, #454a6400) !important;;
     color:#8c8c8c !important;
@@ -103,17 +98,17 @@
 
 
 #F1{
-    top: 250px;
+    top: 125px;
     left: 15%;
 }
 
 #F2{
-    top: 250px;
+    top: 125px;
     left: 40%;
 }
 
 #F3{
-    top: 250px;
+    top: 125px;
     left: 65%;
 }
 

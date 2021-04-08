@@ -56,7 +56,7 @@ var Bubble_Mapping = function (Year, Gender) {
             .attr("x", function (d) { return map1.latLngToLayerPoint([d.CapitalLat, d.CapitalLon]).x })
             .attr("y", function (d) { return map1.latLngToLayerPoint([d.CapitalLat, d.CapitalLon]).y + 0.15 *text1size(d.Quantity)})
             .text(function (d) { return d.Quantity; })
-            .style("font-family", "Abhaya Libre")
+            .style("font-family", "Calibri light")
             .attr("font-size", function (d) { return text1size(d.Quantity)  })
             .attr("text-anchor", "middle")
             .style("text-shadow", "1.5px 1.5px #454a64")
@@ -76,7 +76,7 @@ var Bubble_Mapping = function (Year, Gender) {
 
     });
 
-}
+};
 
 
 Bubble_Mapping(2000, "All");
@@ -108,7 +108,7 @@ $(document).ready(function () {
         $(v1[0])[0].addEventListener("click", function () {
             //The selected
             Gender = v1[1];
-            $(v1[0]).css({ "background": "linear-gradient(to right, #454a64 30%, #454a6400)", "text-shadow": "1.5px 1.5px #a55407" });
+            $(v1[0]).css({ "background": "linear-gradient(to right, #454a64 30%, #454a6400)" });
 
             Bubble_Mapping(Year, v1[1]);
 
@@ -116,7 +116,7 @@ $(document).ready(function () {
             $.each($.grep(GenderList, function (temp) {
                 return temp != v1;
             }), function (i2, v2) {
-                $(v2[0]).css({ "background": "linear-gradient(to right, #a55407 30%, #454a6400)", "text-shadow": "1.5px 1.5px #454a64" });
+                $(v2[0]).css({ "background": "linear-gradient(to right, #f1ece4 30%, #454a6400)" });
             });
 
         });

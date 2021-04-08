@@ -9,13 +9,13 @@ var BarPlotting = function () {
             type: 'column',
             backgroundColor: "transparent",
             style: {
-                fontFamily: "Abhaya Libre",
+                fontFamily: "Arial",
             }
         },
         title: {
             text: ''
         },
-        colors: ["#99b4ce","#a55407"],
+        colors: ["#99b4ce","#a36a6f"],
 
         xAxis: {
             gridLineColor: 'transparent',
@@ -61,10 +61,10 @@ var BarPlotting = function () {
                 color: '#f1ece4'
             },
             itemHoverStyle: {
-                color: '#a55407'
+                color: '#a36a6f'
             },
             itemHiddenStyle: {
-                color: '#a55407'
+                color: '#a36a6f'
             },
             borderColor: '#f1ece4',
             borderWidth: 0,

@@ -25,7 +25,7 @@ var StreamPlotting = function () {
                 zoomType: 'x',
                 backgroundColor: "transparent",
                 style: {
-                    fontFamily: "Abhaya Libre",
+                    fontFamily: "Arial",
                 }
             },
 

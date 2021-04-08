@@ -130,7 +130,7 @@
 .Gender p{
     height:35px;
     font-size:23px;
-    background:linear-gradient(to right, #b3d9ff 30%, #454a6400);
+    background:linear-gradient(to right, #454a64 30%, #454a6400);
     color:#000000;
     padding:5px 0 5px 10px;
     margin:5px 0 5px 0;
@@ -141,17 +141,17 @@
 .Gender #A{
     height:35px;
     font-size:23px;
-    background:linear-gradient(to right, #b3d9ff 30%, #454a6400);
+    background:linear-gradient(to right, #454a64 30%, #454a6400);
     color:#000000;
     padding:5px 0 5px 10px;
     margin:5px 0 5px 0;
-    text-shadow:1.5px 1.5px #000000;
+    /*text-shadow:1.5px 1.5px #000000;*/
 }
 
 .Gender p:hover{
     background:linear-gradient(to right, #454a64 30%, #454a6400);
-    color:#f1ece4;
-    text-shadow:1.5px 1.5px #a55407;
+    /*color:#f1ece4;*/
+    /*text-shadow:1.5px 1.5px #a55407;*/
 }
 
 /* Feature 1 */
