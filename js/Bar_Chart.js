@@ -101,13 +101,13 @@ var BarPlotting = function () {
                 temp = [0, 0, 0, 0, 0, 0, 0];
                 for (var i = 0; i < data.length; i++) {
                     for (var j = 0; j < 7; j++) {
-                        if (data[i].Continent == Continent[j]) { temp[j] += data[i].Quantity; };
-                    };
-                };
-                Series.push({ name: v, data: temp })
+                        if (data[i].Continent == Continent[j]) { temp[j] += data[i].Quantity; }
+                    }
+                }
+                Series.push({ name: v, data: temp });
                 refresher.value = v;
             }
-        })
+        });
     });
 
     options.series = Series;
@@ -122,7 +122,7 @@ var BarPlotting = function () {
             value = newvalue;
             if (newvalue == "Female") {
                 Highcharts.chart(options);
-            };
+            }
         }
     });
 
