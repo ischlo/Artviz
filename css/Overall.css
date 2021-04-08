@@ -86,12 +86,12 @@ body{
 .C1, .C2, .C3{
   position:absolute;
   top:7.5px;
-  height:15px;
-  width:15%;
+  height:17px;
+  width:20%;
   text-align:center;
   color:#000000;
   font-weight:900;
-  overflow: hidden;
+  overflow:auto;
 }
 
 .C1{
