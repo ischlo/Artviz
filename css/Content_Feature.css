@@ -65,13 +65,12 @@
     z-index: 15;
     top: 620px;
     left:35%;
-
     width: 30%;
     height: 50px;
     padding: 10px;
     background-color: transparent;
     text-align: center;
-    color: #000000;
+    color: #454a64;
 }
 .loading {
     color:#454a64;
@@ -83,7 +82,7 @@
     font-size: 15px;
     margin: 0;
     font-family:800;
-    color:#d38236; 
+    color:#454a64; 
     text-shadow:0.7px 0.7px #454a64;
 }
 
