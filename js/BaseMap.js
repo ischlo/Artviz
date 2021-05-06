@@ -25,7 +25,7 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{username}/{id}/tiles/{tilesize}/{
 	id: 'ck8nyguh6022j1iru356j2ufq',
     tilesize: 512,
 	zoomOffset: 0,
-    accessToken: 'pk.eyJ1IjoicmVlcGx5IiwiYSI6ImNpaGZtd29yZzBtNDh2ZmtsY3ozY3lkNjEifQ.Ab5WiJwK8sa0kQhOKhi78g'
+    accessToken: 'pk.eyJ1IjoiaXNjaGxvIiwiYSI6ImNrYWduNGFpdDAwYWkydG1vMWR1NmMyaDMifQ.MTroT-sAYvk6EJIQz98jkQ'
 }).addTo(map1);
 
 
