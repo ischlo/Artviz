@@ -1,6 +1,7 @@
 // Setting bounds for the leaflet map
 // Based on rob.m advice on stack overflow
 // https://stackoverflow.com/questions/22155017/can-i-prevent-panning-leaflet-map-out-of-the-worlds-edge
+
 var southWest = L.latLng(-89.98155760646617, -180),
     northEast = L.latLng(89.99346179538875, 180);
 var bounds = L.latLngBounds(southWest, northEast);
@@ -25,7 +26,7 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{username}/{id}/tiles/{tilesize}/{
 	id: 'ck8nyguh6022j1iru356j2ufq',
     tilesize: 512,
 	zoomOffset: 0,
-    accessToken: 'pk.eyJ1IjoiaXNjaGxvIiwiYSI6ImNrYWduNGFpdDAwYWkydG1vMWR1NmMyaDMifQ.MTroT-sAYvk6EJIQz98jkQ'
+    accessToken: 'pk.eyJ1IjoiaXNjaGxvIiwiYSI6ImNrb2RlcmJ6bjAxcDQyb3IwZzc3MGR4c2QifQ.Ns2muRobgPUhbpwS9jikKA'
 }).addTo(map1);
 
 
@@ -49,7 +50,7 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{username}/{id}/tiles/{tilesize}/{
 	id: 'ck8nyguh6022j1iru356j2ufq',
     tilesize: 512,
 	zoomOffset: 0,
-    accessToken: 'pk.eyJ1IjoicmVlcGx5IiwiYSI6ImNpaGZtd29yZzBtNDh2ZmtsY3ozY3lkNjEifQ.Ab5WiJwK8sa0kQhOKhi78g'
+    accessToken: 'pk.eyJ1IjoiaXNjaGxvIiwiYSI6ImNrb2RlcmJ6bjAxcDQyb3IwZzc3MGR4c2QifQ.Ns2muRobgPUhbpwS9jikKA'
 }).addTo(map2);
 
 
@@ -74,7 +75,7 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{username}/{id}/tiles/{tilesize}/{
 	id: 'ck8nyguh6022j1iru356j2ufq',
     tilesize: 512,
 	zoomOffset: 0,
-    accessToken: 'pk.eyJ1IjoicmVlcGx5IiwiYSI6ImNpaGZtd29yZzBtNDh2ZmtsY3ozY3lkNjEifQ.Ab5WiJwK8sa0kQhOKhi78g'
+    accessToken: 'pk.eyJ1IjoiaXNjaGxvIiwiYSI6ImNrb2RlcmJ6bjAxcDQyb3IwZzc3MGR4c2QifQ.Ns2muRobgPUhbpwS9jikKA'
 }).addTo(map3);
 
 
