@@ -30,8 +30,6 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
 }).addTo(map1);
 
 
-
-
 // feature2
 var map2 = L.map('Map2', {
 	center: [45, 0],
