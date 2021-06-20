@@ -19,14 +19,14 @@ var map1 = L.map('Map1', {
 });
 
 
-L.tileLayer('https://api.mapbox.com/styles/v1/{username}/{id}/tiles/{tilesize}/{z}/{x}/{y}?access_token={accessToken}', {
+L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
     attribution: '&copy<a href="https://www.openstreetmap.org/">OpenStreetMap</a>  &copy<a href="https://www.mapbox.com/">Mapbox</a> &copy<a href="https://d3js.org/">D3</a>',
 	maxZoom: 14,
-	username: 'reeply',
-	id: 'ck8nyguh6022j1iru356j2ufq',
-    tilesize: 512,
+  username: 'reeply',
+	id: "mapbox/light-v10",
+  tilesize: 512,
 	zoomOffset: 0,
-    accessToken: 'pk.eyJ1IjoiaXNjaGxvIiwiYSI6ImNrb2RlcmJ6bjAxcDQyb3IwZzc3MGR4c2QifQ.Ns2muRobgPUhbpwS9jikKA'
+  accessToken: 'pk.eyJ1IjoiaXNjaGxvIiwiYSI6ImNrb2RlcmJ6bjAxcDQyb3IwZzc3MGR4c2QifQ.Ns2muRobgPUhbpwS9jikKA'
 }).addTo(map1);
 
 
@@ -43,14 +43,14 @@ var map2 = L.map('Map2', {
 	minZoom:2
 });
 
-L.tileLayer('https://api.mapbox.com/styles/v1/{username}/{id}/tiles/{tilesize}/{z}/{x}/{y}?access_token={accessToken}', {
+L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
     attribution: '&copy<a href="https://www.openstreetmap.org/">OpenStreetMap</a>  &copy<a href="https://www.mapbox.com/">Mapbox</a> &copy<a href="https://d3js.org/">D3</a>',
 	maxZoom: 14,
-	username: 'reeply',
-	id: 'ck8nyguh6022j1iru356j2ufq',
-    tilesize: 512,
+  username: 'reeply',
+	id: "mapbox/light-v10",
+  tilesize: 512,
 	zoomOffset: 0,
-    accessToken: 'pk.eyJ1IjoiaXNjaGxvIiwiYSI6ImNrb2RlcmJ6bjAxcDQyb3IwZzc3MGR4c2QifQ.Ns2muRobgPUhbpwS9jikKA'
+  accessToken: 'pk.eyJ1IjoiaXNjaGxvIiwiYSI6ImNrb2RlcmJ6bjAxcDQyb3IwZzc3MGR4c2QifQ.Ns2muRobgPUhbpwS9jikKA'
 }).addTo(map2);
 
 
@@ -68,11 +68,11 @@ var map3 = L.map('Map3', {
 	maxZoom:7
 });
 
-L.tileLayer('https://api.mapbox.com/styles/v1/{username}/{id}/tiles/{tilesize}/{z}/{x}/{y}?access_token={accessToken}', {
+L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
     attribution: '&copy<a href="https://www.openstreetmap.org/">OpenStreetMap</a>  &copy<a href="https://www.mapbox.com/">Mapbox</a>',
 	maxZoom: 14,
 	username: 'reeply',
-	id: 'ck8nyguh6022j1iru356j2ufq',
+	id: "mapbox/light-v10",
     tilesize: 512,
 	zoomOffset: 0,
     accessToken: 'pk.eyJ1IjoiaXNjaGxvIiwiYSI6ImNrb2RlcmJ6bjAxcDQyb3IwZzc3MGR4c2QifQ.Ns2muRobgPUhbpwS9jikKA'
