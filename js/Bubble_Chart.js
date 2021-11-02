@@ -81,7 +81,7 @@ var BubblePlotting = function () {
 
         // Something about asynchronous somthing, make it wait until finished downloading
         $.ajax({
-            url: "https://www.theartviz.com/Assessment/Quantity/All/" + v + "/" + "Female", success: function (data) {
+            url: "http://3.9.85.104/Assessment/Quantity/All/" + v + "/" + "Female", success: function (data) {
 
                 for (var j = 0; j < 10; j++) {
                     if (data[j] != undefined) {

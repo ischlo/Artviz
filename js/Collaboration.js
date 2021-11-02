@@ -100,8 +100,8 @@ function fillChart(pathID) {
 }
 
 // API URL
-var collabURL = 'https://www.theartviz.com/Assessmen/Collaboration/Collab';
-var collabYearURL = 'https://www.theartviz.com/Assessmen/Collaboration/CollabYears';
+var collabURL = 'http://3.9.85.104/Assessmen/Collaboration/Collab';
+var collabYearURL = 'http://3.9.85.104/Assessmen/Collaboration/CollabYears';
 
 var edges = new L.layerGroup().addTo(map2);
 

@@ -86,7 +86,7 @@ function fillMap(year) {
 
 function allcolorsforcountry(country) {
     console.log("allcolorsforcountry: Filling the searchbar with colors of the country " + country + "!");
-    $.getJSON("https://www.theartviz.com/Assessment/Color/"  + country + "/All/"+year, function (data) {
+    $.getJSON("http://3.9.85.104/Assessment/Color/"  + country + "/All/"+year, function (data) {
         console.log('allcolors for country '+ status);
         $("select").empty();
         $.each(data, function (u) {
@@ -110,7 +110,7 @@ function allcolorsforcountry(country) {
 function countryandcolor(country, color) {
     console.log("countryandcolor: getting for " + country + " and " + color + " from server and fillig the gallery!");
 
-    $.getJSON("https://www.theartviz.com/Assessment/Color/" + country + "/" + color + "/"+year, function (data) {
+    $.getJSON("http://3.9.85.104/Assessment/Color/" + country + "/" + color + "/"+year, function (data) {
         console.log('country and color '+ status);
         $("#imagegallery").empty();
 
@@ -144,7 +144,7 @@ function countryandcolor(country, color) {
 
 function getcolors() {
     console.log("getcolors: Filling the searchbar!");
-    $.getJSON("https://www.theartviz.com/Assessment/Color/All/All/"+year, function (data) {
+    $.getJSON("http://3.9.85.104/Assessment/Color/All/All/"+year, function (data) {
         console.log('getcolors '+ status);
         color = data[Math.floor(Math.random() * data.length)]['Colors'];
         console.log(color);

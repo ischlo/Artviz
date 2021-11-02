@@ -5,7 +5,7 @@ var StreamPlotting = function () {
     ];
 
     var Series = [];
-    $.getJSON("https://www.theartviz.com/Assessment/Country/All/All", function (data) {
+    $.getJSON("http://3.9.85.104/Assessment/Country/All/All", function (data) {
         var temp1 = [];
         $.each(data, function (i, v) {
 
