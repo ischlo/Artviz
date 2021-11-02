@@ -18,7 +18,7 @@ $(document).ready(function () {
 
 function fillMap(year) {
     console.log("fillmap: getting the colorMap from the server!");
-    $.getJSON("https://www.theartviz.com/Assessment/ColorGeo/"+year, function (data, status) {
+    $.getJSON("3.9.85.104/Assessment/ColorGeo/"+year, function (data, status) {
 	console.log('Fillmap '+ status);
         
         var mapcountry = "", mapcolor = "", m = 0;
