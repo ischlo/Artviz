@@ -52,7 +52,7 @@
 #F1, #F2, #F3{
     position: absolute;
     background: transparent;
-    color:#f1ece4;
+    background:#000000;
     height: 30%;
     width:20%;
     outline:none;
