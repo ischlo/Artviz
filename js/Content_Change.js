@@ -8,9 +8,8 @@ $(document).ready(function () {
         $(v1)[0].addEventListener('click', function () {   // mind the difference of jquery object and dom object
             
             // the selected
-            if (i1 == 1) { CollaborationPlotting() };
-            $(v1).css({ "background": "linear-gradient(to right, #454a6400, #f1ece4 50%, #454a6400)", "color": "#454a64" });
-
+            if (i1 == 1) { CollaborationPlotting() }
+            $(v1).css({ "background": "#FFFFFF", "color": "#000000" });
 
             // the rest
             $.each($.grep(CoverSL, function (temp) {
@@ -97,8 +96,8 @@ $(document).ready(function () {
             document.getElementsByClassName("S" + v1)[i].addEventListener('click', function () {
                 // the selected
                 //if (i1 == 0) { Bubble_Mapping(2000, "All") }else{d3.select("#Map1").select("svg").remove();};
-                if (i1 == 1) { CollaborationPlotting() };
-                $(".S" + v1).css("color", "#454a64");
+                if (i1 == 1) { CollaborationPlotting() }
+                $(".S" + v1).css({ "background": "#FFFFFF", "color": "#000000" });
                 $("#F" + v1).css({ "background": "linear-gradient(to right, #454a6400, #f1ece4 50%, #454a6400)", "color": "#454a64" });
 
                 // the rest
@@ -143,17 +142,17 @@ $(document).ready(function () {
         $.each(FeaNum, function (i1, v1) {
             document.getElementsByClassName("C" + v1)[i].addEventListener('click', function () {
                 // the selected
-                if (i1 == 0) { StreamPlotting(); };
+                if (i1 == 0) { StreamPlotting(); }
                 
-                if (i1 == 2) { BubblePlotting(); };
-                $(".C" + v1).css("color", "#454a64");
+                if (i1 == 2) { BubblePlotting(); }
+                $(".C" + v1).css({ "background": "#FFFFFF", "color": "#000000" });
                 $("#Me" + v1).css("display", "block");
                 $("#Cht" + v1).css("display", "block");
                 // the rest
                 $.each($.grep(FeaNum, function (temp) {
                     return temp != v1;
                 }), function (i2, v2) {
-                    $(".C" + v2).css("color", "#000000")
+                    $(v2).css({ "background": "#000000", "color": "#FFFFFF" });
                     $("#Me" + v2).css("display", "none");
                     $("#Cht" + v2).css("display", "none");
                 });

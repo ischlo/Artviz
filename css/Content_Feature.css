@@ -1,7 +1,6 @@
 .Feature{ 
     position:absolute;
     padding:0;
-    top:50px;
     width:75%;
     height:700px;
 }
@@ -263,14 +262,15 @@
   
 
  .Popup .leaflet-popup-tip{
-    background: #454a64;
+    background: #000000;
  }
  .Popup .leaflet-popup-content-wrapper {
-    background: #a55307d8;
-    color:#f1ece4;
+    background: #000000;
+    color:#FFFFFF;
+    border-radius: 0;
     text-align: center;
-    border: 1.5px solid #454a64;
-    font-family:"Abhaya Libre" ;
+    font-size: large;
+    font-family:"Helvetica";
 }
 
 /* Feature 3 */

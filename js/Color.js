@@ -9,7 +9,7 @@ $(document).ready(function () {
     getcolors();
     
     fillMap(year);
-    //console.log("Getting all the colors for the searchar:");
+    console.log("Getting all the colors for the searchar:");
     
 });
 

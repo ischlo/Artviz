@@ -9,14 +9,17 @@ body{
 
 .Cover{
   position:relative;
-  height:300px;
+  height:70px;
   padding:0;
+  background-color: #000000;
 }
 
 .Content{
   position:relative;
   padding:0;
-  height:750px;
+  top: 5%;
+  height:720px;
+  background-color: #000000;
 }
 
 .Analysis{
@@ -83,13 +86,24 @@ body{
 }
 
 
-.C1, .C2, .C3{
+.C2, .C3{
+  position:absolute;
+  top:7.5px;
+  height:20px;
+  width:20%;
+  text-align:center;
+  color:#FFFFFF;
+  font-weight:900;
+}
+
+.C1{
   position:absolute;
   top:7.5px;
   height:20px;
   width:20%;
   text-align:center;
   color:#000000;
+  background-color: #FFFFFF;
   font-weight:900;
 }
 
@@ -107,4 +121,5 @@ body{
 
 .C1:hover, .C2:hover, .C3:hover{
   color:#000000;
+  background-color: #FFFFFF;
 }

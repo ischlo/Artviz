@@ -1,10 +1,10 @@
 
 #navbar{
     position:absolute;
-    height:60px;
+    height:40px;
     padding:10px;
     z-index: 40;
-    width:40%;
+    width:50%;
     color:#000000;
     font-family: "Calibri Light";
     outline:none;
@@ -26,15 +26,6 @@
     width:70%;
 }
 
-
-.Cover #Intro{
-    position:absolute;
-    width:100%;
-    height:300px;
-    z-index: 30;
-    background-color: #000000;
-    overflow: hidden;
-}
 
 #IntroTitle{
     position: absolute;
@@ -62,11 +53,16 @@
     position: absolute;
     background: transparent;
     color:#f1ece4;
-    height: 50px;
+    height: 30%;
     width:20%;
-    padding:5px 0 5px 0px;
     outline:none;
-    text-align: center;
+    padding-bottom: 0px;
+    text-align:center;
+}
+
+#F1{
+    background: #FFFFFF;
+    color:#000000;
 }
 
 #F1 h1, #F2 h1, #F3 h1{
@@ -78,37 +74,24 @@
     font-weight:200;
 }
 
-
-#F1 p,#F2 p, #F3 p{
-    position: absolute;
-
-    padding-top:10px;
-    width:100%;
-    height:100px;
-    font-size: 14px;
-    color:#f1ece4;
-    text-align:justify;
-}
-
-
 #F1:hover, #F2:hover, #F3:hover{
-    background: linear-gradient(to right, #454a6400, #f1ece4 50%, #454a6400) !important;;
-    color:#8c8c8c !important;
+    background: #FFFFFF;
+    color:#000000;
 }
 
 
 #F1{
-    top: 125px;
+    top: 60%;
     left: 15%;
 }
 
 #F2{
-    top: 125px;
+    top: 60%;
     left: 40%;
 }
 
 #F3{
-    top: 125px;
+    top: 60%;
     left: 65%;
 }
 
