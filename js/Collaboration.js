@@ -100,8 +100,8 @@ function fillChart(pathID) {
 }
 
 // API URL
-var collabURL = 'http://3.9.85.104/Assessmen/Collaboration/Collab';
-var collabYearURL = 'http://3.9.85.104/Assessmen/Collaboration/CollabYears';
+var collabURL = 'https://www.ischlosser.com/Assessmen/Collaboration/Collab';
+var collabYearURL = 'https://www.ischlosser.com/Assessmen/Collaboration/CollabYears';
 
 var edges = new L.layerGroup().addTo(map2);
 
