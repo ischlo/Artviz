@@ -75,9 +75,7 @@ var Bubble_Mapping = function (Year, Gender) {
         map1.on("moveend", update);
 
     });
-
 };
-
 
 Bubble_Mapping(2000, "All");
 

@@ -1,10 +1,13 @@
 var CoverSL = ["#F1", "#F2", "#F3"];
 var FeaNum = ["1", "2", "3"];
 // 1. Click on Cover
-
+// var selected = 1
 // 1.1 Change Cover
 $(document).ready(function () {
     $.each(CoverSL, function (i1, v1) {
+        
+        
+        
         $(v1)[0].addEventListener('click', function () {   // mind the difference of jquery object and dom object
             
             // the selected

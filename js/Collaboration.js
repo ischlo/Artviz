@@ -5,13 +5,10 @@
 // identify which columns in the database represent years
 // the values in these columns represent the number of collaborations
 // between each pair of countries for each year
-var edgeArray = [];
 
 // Setting bounds for the leaflet map
 // Based on rob.m advice on stack overflow
 // https://stackoverflow.com/questions/22155017/can-i-prevent-panning-leaflet-map-out-of-the-worlds-edge
-
-
 
 // Using jQuery to fadeout the MoMA logo on zoomstart event
 map2.on('zoomstart', function () {

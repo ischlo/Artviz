@@ -1,3 +1,3 @@
-var aws_endpoint = "http://3.9.85.104";
+var aws_endpoint = "https://artviz.live";
 
 console.log("set the aws endpoint");
