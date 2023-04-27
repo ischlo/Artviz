@@ -1,7 +1,7 @@
 var CoverSL = ["#F1", "#F2", "#F3"];
 var FeaNum = ["1", "2", "3"];
 // 1. Click on Cover
-// var selected = 1
+var selected = "1";
 // 1.1 Change Cover
 $(document).ready(function () {
     $.each(CoverSL, function (i1, v1) {
@@ -69,20 +69,34 @@ $(document).ready(function () {
 
 // 2.1 change itself and Cover
 $(document).ready(function () {
-        $.each(FeaNum, function (i1, v1) {
+        //$.each(FeaNum, function (i1, v1) {
                 // the selected
-                if (i1 == 1) { CollaborationPlotting() }
-                $("#F" + v1).css({ "background": "#000000", "color": "#FFFFFF" });
+                if (selected == "1") { CollaborationPlotting() }
+                $("#F" + selected).css({ "background": "#FFFFFF", "color": "#000000" });
 
                 // the rest
                 $.each($.grep(FeaNum, function (temp) {
-                    return temp != v1;
+                    return temp != selected;
                 }), function (i2, v2) {
-                    $("#F" + v2).css({ "background": "#FFFFFF", "color": "#000000"});
+                    $("#F" + v2).css({ "background": "#000000", "color": "#FFFFFF"});
                 });
-            });
+ //           });
 });
 
+
+// the selected
+$(document).ready(function () {
+  $("#Feature" + selected).css("display", "block");
+  $("#Text" + selected).css("display", "block");
+  // the rest
+  $.each($.grep(FeaNum, function (temp) {
+      return temp != selected;
+  }), function (i2, v2) {
+      $("#Feature" + v2).css("display", "none");
+      $("#Text" + v2).css("display", "none");
+  });
+});
+/*
 // 2.2 change Content
 $(document).ready(function () {
         $.each(FeaNum, function (i1, v1) {
@@ -99,3 +113,6 @@ $(document).ready(function () {
                 });
             });
 });
+
+
+*/
