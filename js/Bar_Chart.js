@@ -97,7 +97,7 @@ var BarPlotting = function () {
     $.each(Gender, function (i0, v) {
 
         $.ajax({
-            url: "https://www.ischlosser.com/Assessment/Quantity/All/All/" + v, success: function (data) {
+            url: "https://3.9.85.104/Assessment/Quantity/All/All/" + v, success: function (data) {
                 temp = [0, 0, 0, 0, 0, 0, 0];
                 for (var i = 0; i < data.length; i++) {
                     for (var j = 0; j < 7; j++) {

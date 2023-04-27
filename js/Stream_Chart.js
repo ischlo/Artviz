@@ -5,7 +5,7 @@ var StreamPlotting = function () {
     ];
 
     var Series = [];
-    $.getJSON("https://www.ischlosser.com/Assessment/Country/All/All", function (data) {
+    $.getJSON(aws_endpoint+"/Assessment/Country/All/All", function (data) {
         var temp1 = [];
         $.each(data, function (i, v) {
 
