@@ -1,4 +1,3 @@
-var portnumber = 3000;
 var country = "All";
 var color = "";
 var year =1930;

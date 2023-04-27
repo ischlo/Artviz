@@ -22,10 +22,7 @@ var circling = function(CapitalLat,CapitalLon,Quantity,CountryName){
     }).bindTooltip("<b>" + CountryName + "</b>", { className: 'Tooltip' });
 
     Circles.addLayer(Circle);
-
-
 };
-
 
 // Mapping function
 var Bubble_Mapping = function (Year, Gender) {
@@ -94,8 +91,6 @@ $(document).ready(function () {
             Bubble_Mapping(Year, Gender);
         });
 });
-
-
 
 
 //Listener to Gender

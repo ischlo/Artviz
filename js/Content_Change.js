@@ -6,25 +6,23 @@ var FeaNum = ["1", "2", "3"];
 $(document).ready(function () {
     $.each(CoverSL, function (i1, v1) {
         
-        
-        
         $(v1)[0].addEventListener('click', function () {   // mind the difference of jquery object and dom object
             
             // the selected
-            if (i1 == 1) { CollaborationPlotting() }
+            if (i1 == 1) { 
+              CollaborationPlotting() 
+            }
             $(v1).css({ "background": "#FFFFFF", "color": "#000000" });
 
             // the rest
             $.each($.grep(CoverSL, function (temp) {
                 return temp != v1;
             }), function (i2, v2) {
-                $(v2).css({ "background": "transparent", "color": "#f1ece4" });
+                $(v2).css({ "background": "#000000", "color": "#FFFFFF" });
             });
         });
     });
 });
-
-
 
 // Click on Trans 2
 // 3.1 change itself
@@ -50,12 +48,12 @@ $(document).ready(function () {
         });
 });
 
-
 // 1.3 change Content
 $(document).ready(function () {
     $.each(FeaNum, function (i1, v1) {
         $("#F" + v1)[0].addEventListener('click', function () {
             // the selected
+            if (i1 == 1) { CollaborationPlotting() }
             $("#Feature" + v1).css("display", "block");
             $("#Text" + v1).css("display", "block");
             // the rest
@@ -68,8 +66,6 @@ $(document).ready(function () {
         });
     });
 });
-
-// Click on Trans 1
 
 // 2.1 change itself and Cover
 $(document).ready(function () {
@@ -87,7 +83,6 @@ $(document).ready(function () {
             });
 });
 
-
 // 2.2 change Content
 $(document).ready(function () {
         $.each(FeaNum, function (i1, v1) {
@@ -104,7 +99,3 @@ $(document).ready(function () {
                 });
             });
 });
-
-
-
-

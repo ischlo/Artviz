@@ -53,6 +53,7 @@
     position: absolute;
     background: transparent;
     background:#000000;
+    color:#FFFFFF;
     height: 30%;
     width:20%;
     outline:none;
@@ -60,10 +61,6 @@
     text-align:center;
 }
 
-#F1{
-    background: #FFFFFF;
-    color:#000000;
-}
 
 #F1 h1, #F2 h1, #F3 h1{
     font-size: 20px;
@@ -73,12 +70,6 @@
     font-size: 12px;
     font-weight:200;
 }
-
-#F1:hover, #F2:hover, #F3:hover{
-    background: "transparent";
-    color:#FFFFFF;
-}
-
 
 #F1{
     top: 60%;

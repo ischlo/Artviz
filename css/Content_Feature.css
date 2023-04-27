@@ -1,6 +1,7 @@
 .Feature{ 
     position:absolute;
-    padding:0;
+    padding:0px;
+    margin:0px;
     width:75%;
     height:700px;
 }
@@ -112,7 +113,7 @@
     height: 10px;
     width: 10px;
     margin-top: -3.5px; /*center the thumb*/
-    background: #d38236; 
+    background: #454a64; 
     border-radius: 50%; /*round shape thumb*/
     border: 1.5px #bbd9df98; 
     box-shadow: 1px 1px #454a64; 
@@ -153,19 +154,6 @@
 }
 
 /* Feature 1 */
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* Feature 2 */
 
